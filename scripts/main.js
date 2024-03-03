@@ -23,7 +23,7 @@ const loadPosts = async (catName) => {
         data.posts.forEach((post) => {
 
         newDiv1.innerHTML += `
-        <div class="mt-6 flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
+        <div class="mt-6 flex  gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
             <!-- Section 1 container left card Left  -->
             <div id="small-circle-cont" class="relative rounded-2xl w-16 h-16">
                 <img id="sec1img" class="rounded-2xl  object-fill" src="${post.image}" alt="">
@@ -43,13 +43,13 @@ const loadPosts = async (catName) => {
                 <!-- Section 1 container left card Right div 4 -->
                 <hr class="border-t border-dashed border-black mt-5 mb-6 border-[#12132d83]">
                 <!-- Section 1 container left card Right div 5 -->
-                <div class="flex justify-between">
-                    <div class="flex gap-7">
+                <div class="flex items-center justify-between">
+                    <div class="flex gap-1 md:gap-1 lg:gap-7">
                         <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-message"></i> <span>${post.comment_count}</span></p>
                         <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-eye"></i></i> <span>${post.view_count}</span></p>
                         <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-clock"></i> <span>${post.posted_time}</span> min</p>
                     </div>
-                    <div class="bg-green-600 h-8 w-9 rounded-full flex
+                    <div class="bg-green-600 h-9 w-9 rounded-full flex
                         justify-center">
                         <button onclick="readBtn('${post.id}')" class=btn"><i class=" text-white fa-solid
                         fa-envelope-open"></i></button>

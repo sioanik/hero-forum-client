@@ -35,14 +35,14 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            class="menu flex items-center menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li><a><i class="fa-solid fa-house"></i></a></li>
                             <li><a><i class="fa-solid fa-pen"></i></a></li>
                             <li><a><i class="fa-solid fa-user-plus"></i></a></li>
                             <li><a><i class="fa-solid fa-flag"></i></a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-4xl font-black text-[#12132D]">HeroForum</a>
+                    <a class="btn btn-ghost text-2xl md:text-4xl lg:text-4xl font-black text-[#12132D]">HeroForum</a>
                 </div>
                 <div class="navbar-end">
                     <div class=" hidden lg:flex">
@@ -80,7 +80,7 @@
                         </ul>
                     </div>
                     <div class="">
-                        <a class="btn text-xl font-bold w-36 rounded-3xl text-white bg-[#797DFC]">Sign In</a>
+                        <a class="btn text-base md:text-xl lg:text-xl  font-bold w-24 md:w-36 lg:w-36 rounded-3xl text-white bg-[#797DFC]">Sign In</a>
                     </div>
                 </div>
             </div>
@@ -90,25 +90,25 @@
             <div class=" min-h-[550px] rounded-3xl bg-no-repeat bg-[#12132D]"
                 style="background-image: url(./images/bgbanner.png);">
                 <!-- <div class="hero-overlay rounded-3xl bg-opacity-10"></div> -->
-                <div class=" p-20 text-center text-neutral-content">
-                    <div class="flex gap-10 px-8">
+                <div class=" md:p-8 lg:p-20 text-center text-neutral-content">
+                    <div class="flex flex-col md:flex-row lg:flex-row gap-10 px-8">
                         <!-- banner left  -->
-                        <div class="w-[70%]">
-                            <h1 class="mb-5 text-6xl font-black text-white text-left">Welcome to the <br> <span
+                        <div class="w-[100%] md:w-[50%] lg:w-[70%]">
+                            <h1 class="pt-10 mb-5 text-4xl md:text-5xl lg:text-5xl font-black text-white text-left">Welcome to the <br> <span
                                     class="bg-gradient-to-r from-[#7A7DFC] to-[#7a7cfc36] bg-clip-text text-transparent">
                                     Hero</span> Forum</h1>
                             <p class="mb-8 mt-5 text-xl text-left font-medium">A place for passionate individuals to
                                 share ideas, seek advice, and engage in meaningful discussions.</p>
                             <div class="relative flex items-center">
                                 <input id="search-input" type="text" placeholder="Search here anything"
-                                    class="h-14 text-black  input min-w-[400px] rounded-[50px]" />
+                                    class="h-14 text-black  input min-w-[320px] md:min-w-[400px] lg:min-w-[400px] rounded-[50px]" />
                                 <button onclick="searchBtn()"
-                                    class="absolute left-64 btn border-none bg-[#7D7DFC] btn-active btn-primary rounded-[46px] w-32 text-xl font-bold text-white">Search</button>
+                                    class="absolute left-44 md:left-64 lg:left-64 btn border-none bg-[#7D7DFC] btn-active btn-primary rounded-[46px] w-32 text-xl font-bold text-white">Search</button>
                             </div>
                         </div>
                         <!-- banner right  -->
-                        <div class="bg-white flex items-center rounded-2xl h-72">
-                            <div class="px-14 text-black rounded-2xl min-w-72 flex flex-col  gap-6">
+                        <div class="bg-white flex justify-center items-center rounded-2xl h-72 mt-1 md:mt-9 lg:mt-3">
+                            <div class="px-1 md:px-8 lg:px-14 text-black rounded-2xl min-w-56 md:min-w-56 lg:min-w-72 flex flex-col gap-6">
                                 <div class="flex justify-between">
                                     <p>Registered Users</p>
                                     <p>01</p>
@@ -147,10 +147,10 @@
             <div id="loading-spinner" class="hidden flex justify-center items-center">
                 <span class="loading loading-spinner loading-lg"></span>
             </div>
-            <div class="flex gap-6">
+            <div class="flex flex-col md:flex-row lg:flex-row gap-6">
                 <!-- Section 1 container left  -->
                 
-                <div id="sec1leftcont" class="w-[70%]">
+                <div id="sec1leftcont" class="w-[100%] md:w-[70%] lg:w-[70%]">
                     
                     <div class="hidden mt-6 flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
                         <!-- Section 1 container left card Left  -->
@@ -199,10 +199,10 @@
                     </div>
                 </div>
                 <!-- Section 1 container right  -->
-                <div id="readPostContainer" class="bg-[#7d7dfc07] p-6 rounded-3xl flex-grow">
+                <div id="readPostContainer" class="bg-[#7d7dfc07] p-6 rounded-3xl md:min-w-72 lg:min-w-80">
                     <div class="flex justify-between">
                         <p class="text-xl font-bold">Title</p>
-                        <p><i class="fa-solid fa-check-double"></i> Mark as read (<span id="readCount"></span>)</p>
+                        <p><i class="fa-solid fa-check-double"></i> Mark as read (<span id="readCount">0</span>)</p>
                     </div>
                     <!-- <div class="my-2 p-4 bg-white rounded-2xl flex justify-between gap-2">
                         <p class="text-base font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -218,10 +218,10 @@
         <section>
             <div class="hero h-auto rounded-3xl bg-[#12132D] mt-24">
                 <div class="hero-content flex-col lg:flex-row-reverse gap-14">
-                    <img src="./images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
-                    <div class="pl-8">
+                    <img src="./images/joinforum.png" class="max-w-sm rounded-lg" />
+                    <div class="pl-1 md:pl-8 lg:pl-8">
                         <h1 class="text-4xl font-black text-white">Join Our Forum</h1>
-                        <p class="py-6 text-white text-lg">Join our vibrant forum community. Engage in discussions, seek
+                        <p class="py-6 text-white text-base md:text-lg lg:text-lg">Join our vibrant forum community. Engage in discussions, seek
                             advice, and connect with like-minded individuals.</p>
                         <button
                             class="min-w-60 btn text-white text-xl font-bold rounded-3xl border-none bg-[#7D7DFC]">Registered
@@ -238,7 +238,7 @@
         </Section>
         <!-- Section 5 posts container  -->
         <section>
-            <div id="latest-post-cont" class="flex gap-6">
+            <div id="latest-post-cont" class="flex flex-col md:flex-row lg:flex-row gap-6">
                 <!-- <div class="p-6 rounded-3xl border-2 border border-[#12132d1e] bg-white">
                     <div class="flex justify-center max-h-48 rounded-3xl">
                         <img class="object-contain" src="./images/joinforum.png" alt="">
