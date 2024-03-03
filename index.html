@@ -100,9 +100,9 @@
                             <p class="mb-8 mt-5 text-xl text-left font-medium">A place for passionate individuals to
                                 share ideas, seek advice, and engage in meaningful discussions.</p>
                             <div class="relative flex items-center">
-                                <input type="text" placeholder="Search here anything"
-                                    class="h-14  input min-w-[400px] rounded-[50px]" />
-                                <button
+                                <input id="search-input" type="text" placeholder="Search here anything"
+                                    class="h-14 text-black  input min-w-[400px] rounded-[50px]" />
+                                <button onclick="searchBtn()"
                                     class="absolute left-64 btn border-none bg-[#7D7DFC] btn-active btn-primary rounded-[46px] w-32 text-xl font-bold text-white">Search</button>
                             </div>
                         </div>
@@ -144,9 +144,14 @@
         </Section>
         <!-- Section 1 container  -->
         <section id="sec1cont">
+            <div id="loading-spinner" class="hidden flex justify-center items-center">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
             <div class="flex gap-6">
                 <!-- Section 1 container left  -->
+                
                 <div id="sec1leftcont" class="w-[70%]">
+                    
                     <div class="hidden mt-6 flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
                         <!-- Section 1 container left card Left  -->
                         <div class="relative rounded-2xl w-16 h-16">
@@ -194,7 +199,7 @@
                     </div>
                 </div>
                 <!-- Section 1 container right  -->
-                <div id="readPostContainer" class="bg-[#7d7dfc07] p-6 rounded-3xl">
+                <div id="readPostContainer" class="bg-[#7d7dfc07] p-6 rounded-3xl flex-grow">
                     <div class="flex justify-between">
                         <p class="text-xl font-bold">Title</p>
                         <p><i class="fa-solid fa-check-double"></i> Mark as read (<span id="readCount"></span>)</p>
@@ -214,7 +219,7 @@
             <div class="hero h-auto rounded-3xl bg-[#12132D] mt-24">
                 <div class="hero-content flex-col lg:flex-row-reverse gap-14">
                     <img src="./images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
+                    <div class="pl-8">
                         <h1 class="text-4xl font-black text-white">Join Our Forum</h1>
                         <p class="py-6 text-white text-lg">Join our vibrant forum community. Engage in discussions, seek
                             advice, and connect with like-minded individuals.</p>
@@ -233,8 +238,8 @@
         </Section>
         <!-- Section 5 posts container  -->
         <section>
-            <div class="flex gap-6">
-                <div class="p-6 rounded-3xl border-2 border border-[#12132d1e] bg-white">
+            <div id="latest-post-cont" class="flex gap-6">
+                <!-- <div class="p-6 rounded-3xl border-2 border border-[#12132d1e] bg-white">
                     <div class="flex justify-center max-h-48 rounded-3xl">
                         <img class="object-contain" src="./images/joinforum.png" alt="">
                     </div>
@@ -290,7 +295,7 @@
                             <p class="pt-1 text-[#12132d83] text-sm">Designation</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
@@ -323,6 +328,7 @@
 
     <!-- scripts -->
     <script src="./scripts/main.js"></script>
+    <!-- <script src="./scripts/main2.js"></script> -->
     <script src="./scripts/utilities.js"></script>
 </body>
 
