@@ -6,3 +6,10 @@
 .font-mulish{
     font-family: "Mulish", sans-serif;
 }
+
+.red-dot{
+    background-color: #FF3434;
+}
+.green-dot{
+    background-color: #10B981;
+}
