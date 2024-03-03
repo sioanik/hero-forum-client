@@ -20,8 +20,8 @@
 
 </head>
 
-<body class="container mx-auto font-mulish">
-    <header>
+<body class=" container mx-auto font-mulish">
+    <header class="w-[90%] mx-auto">
         <!-- nav section -->
         <section class="pt-5">
             <div class="navbar bg-base-100">
@@ -44,60 +44,56 @@
                     </div>
                     <a class="btn btn-ghost text-4xl font-black text-[#12132D]">HeroForum</a>
                 </div>
-                <div class="navbar-center pl-[54%] hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1 rounded-full gap-5">
-                        <!-- <li><a class="border rounded-full size-14 flex items-center justify-center"><i
-                                    class="fa-solid fa-house"></i></a></li>
-                        <li><a class="border rounded-full size-14 flex items-center justify-center"><i
-                                    class="fa-solid fa-pen"></i></a></li>
-                        <li><a class="border rounded-full size-14 flex items-center justify-center"><i
-                                    class="fa-solid fa-user-plus"></i></a></li> -->
-                        <li class="tooltip" data-tip="Home">
-                            <button
-                                class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
-                                <p><i class="fa-solid fa-house"></i></p>
-                            </button>
-                        </li>
-                        <li class="tooltip" data-tip="Edit">
-                            <button
-                                class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
-                                <p><i class="fa-solid fa-pen"></i></p>
-                            </button>
-                        </li>
-                        <li class="tooltip" data-tip="Add User">
-                            <button
-                                class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
-                                <p><i class="fa-solid fa-user-plus"></i></p>
-                            </button>
-                        </li>
-                        <li class="tooltip" data-tip="Region">
-                            <button
-                                class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
-                                <p><i class="fa-solid fa-flag"></i></p>
-                            </button>
-                        </li>
-                        <!-- <div class="tooltip" data-tip="hello">
-                            <button
-                                class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
-                                <p><i class="fa-solid fa-flag"></i></p>
-                            </button>
-                        </div> -->
-                    </ul>
-                </div>
                 <div class="navbar-end">
-                    <a class="btn text-xl font-bold w-36 rounded-3xl text-white bg-[#797DFC]">Sign In</a>
+                    <div class=" hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 rounded-full gap-5">
+                            <li class="tooltip" data-tip="Home">
+                                <button
+                                    class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
+                                    <p><i class="fa-solid fa-house"></i></p>
+                                </button>
+                            </li>
+                            <li class="tooltip" data-tip="Edit">
+                                <button
+                                    class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
+                                    <p><i class="fa-solid fa-pen"></i></p>
+                                </button>
+                            </li>
+                            <li class="tooltip" data-tip="Add User">
+                                <button
+                                    class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
+                                    <p><i class="fa-solid fa-user-plus"></i></p>
+                                </button>
+                            </li>
+                            <li class="tooltip" data-tip="Report">
+                                <button
+                                    class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
+                                    <p><i class="fa-solid fa-flag"></i></p>
+                                </button>
+                            </li>
+                            <!-- <div class="tooltip" data-tip="hello">
+                                <button
+                                    class="btn border border-[#0307120c] rounded-full size-14 flex items-center justify-center">
+                                    <p><i class="fa-solid fa-flag"></i></p>
+                                </button>
+                            </div> -->
+                        </ul>
+                    </div>
+                    <div class="">
+                        <a class="btn text-xl font-bold w-36 rounded-3xl text-white bg-[#797DFC]">Sign In</a>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- banner section -->
         <section class="my-14">
-            <div class="hero min-h-[550px] rounded-3xl bg-no-repeat bg-[#12132D]"
+            <div class=" min-h-[550px] rounded-3xl bg-no-repeat bg-[#12132D]"
                 style="background-image: url(./images/bgbanner.png);">
-                <div class="hero-overlay rounded-3xl bg-opacity-10"></div>
-                <div class="hero-content text-center text-neutral-content">
-                    <div class="flex gap-12 px-24">
+                <!-- <div class="hero-overlay rounded-3xl bg-opacity-10"></div> -->
+                <div class=" p-20 text-center text-neutral-content">
+                    <div class="flex gap-10 px-8">
                         <!-- banner left  -->
-                        <div class="flex-grow">
+                        <div class="w-[70%]">
                             <h1 class="mb-5 text-6xl font-black text-white text-left">Welcome to the <br> <span
                                     class="bg-gradient-to-r from-[#7A7DFC] to-[#7a7cfc36] bg-clip-text text-transparent">
                                     Hero</span> Forum</h1>
@@ -112,7 +108,7 @@
                         </div>
                         <!-- banner right  -->
                         <div class="bg-white flex items-center rounded-2xl h-72">
-                            <div class="px-14 text-black rounded-2xl min-w-96 flex flex-col  gap-6">
+                            <div class="px-14 text-black rounded-2xl min-w-72 flex flex-col  gap-6">
                                 <div class="flex justify-between">
                                     <p>Registered Users</p>
                                     <p>01</p>
@@ -139,7 +135,7 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="w-[90%] mx-auto">
         <!-- Section 1 title  -->
         <Section class="mt-24 mb-12 ">
             <h3 class="text-4xl font-black text-center">Let's Discuss</h3>
@@ -147,42 +143,53 @@
                 with the community.</p>
         </Section>
         <!-- Section 1 container  -->
-        <section>
+        <section id="sec1cont">
             <div class="flex gap-6">
                 <!-- Section 1 container left  -->
-                <div class="max-w-[65%] flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
-                    <!-- Section 1 container left card Left  -->
-                    <div class="relative size-20 rounded-2xl">
-                        <img src="./images/joinforum.png" alt="">
-                        <p class="top-0 right-0 absolute size-4 rounded-full green-dot"></p>
-                    </div>
-                    <!-- Section 1 container left card Right  -->
-                    <div class="text-[#12132D]">
-                        <!-- Section 1 container left card Right div 1 -->
-                        <div class="flex gap-4 pb-3">
-                            <p class="text-sm font-medium"># <span></span></p>
-                            <p class="text-sm font-medium">Author: <span></span></p>
+                <div id="sec1leftcont" class="w-[70%]">
+                    <div class=" mt-6 flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
+                        <!-- Section 1 container left card Left  -->
+                        <div class="relative rounded-2xl w-16 h-16">
+                            <img id="sec1img" class="rounded-2xl  object-fill" src="${post.image}" alt="">
+                            <p class="top-0 right-0 absolute size-4 rounded-full green-dot"></p>
                         </div>
-                        <!-- Section 1 container left card Right div 2 -->
-                        <h4 class="text-xl font-bold pb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Veniam, maxime.</h4>
-                        <!-- Section 1 container left card Right div 3 -->
-                        <p class="text-base text-[#12132d83]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ipsam aliquid nemo quis cum quam repellat sapiente eos natus facere minima!</p>
-                        <!-- Section 1 container left card Right div 4 -->
-                        <hr class="border-t border-dashed border-black mt-5 mb-6 border-[#12132d83]">
-                        <!-- Section 1 container left card Right div 5 -->
-                        <div class="flex justify-between">
-                            <div class="flex gap-7">
-                                <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-message"></i><span></span></p>
-                                <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-eye"></i></i><span></span></p>
-                                <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-clock"></i><span></span></p>
+                        <!-- Section 1 container left card Right  -->
+                        <div class="w-full">
+                            <!-- Section 1 container left card Right div 1 -->
+                            <div class="text-[#12132D] flex gap-4 pb-3">
+                                <p class="text-sm font-medium"># <span>${post.category}</span></p>
+                                <p class="text-sm font-medium">Author: <span>${post.author.name}</span></p>
                             </div>
-                            <a href="">
-                                <p class="bg-green-600 rounded-full"><i
-                                        class="text-lg text-white  size-7 text-center fa-solid fa-envelope-open"></i></i>
-                                </p>
-                            </a>
+                            <!-- Section 1 container left card Right div 2 -->
+                            <h4 class="text-xl font-bold pb-4">${post.title}</h4>
+                            <!-- Section 1 container left card Right div 3 -->
+                            <p class="text-base text-[#12132d83]">${post.description}</p>
+                            <!-- Section 1 container left card Right div 4 -->
+                            <hr class="border-t border-dashed border-black mt-5 mb-6 border-[#12132d83]">
+                            <!-- Section 1 container left card Right div 5 -->
+                            <div class="flex justify-between">
+                                <div class="flex gap-7">
+                                    <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-message"></i>
+                                        <span>${post.comment_count}</span>
+                                    </p>
+                                    <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-eye"></i></i>
+                                        <span>${post.view_count}</span>
+                                    </p>
+                                    <p class="text-lg text-[#12132d83]"><i class="fa-solid fa-clock"></i>
+                                        <span>${post.posted_time}</span> min
+                                    </p>
+                                </div>
+
+                                <div class="bg-green-600 h-8 w-9 rounded-full flex justify-center">
+                                    <button class=btn"><i class=" text-white fa-solid fa-envelope-open"></i></button>
+                                </div>
+
+                                <!-- <a href="" id="read-btn">
+                                    <p class="bg-green-600 rounded-full"><i
+                                            class="text-lg text-white  size-7 text-center fa-solid fa-envelope-open"></i></i>
+                                    </p>
+                                </a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -303,9 +310,9 @@
                 <a><i class="fa-brands fa-facebook-f"></i></a>
                 <a><i class="fa-brands fa-instagram"></i></a>
                 <a><i class="fa-brands fa-github"></i></a>
-                
+
             </div>
-            
+
         </div>
         <div class="w-full">
             <hr class="border-t-2 w-[90%] border-solid border-[#12132d28] mb-6 ">
