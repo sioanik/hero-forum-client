@@ -1,19 +1,18 @@
-const allPosts = async () => {
+let readCount = 0
+
+const loadPosts = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
     const data = await res.json()
     data.posts.forEach((post) => {
-        // console.log(post.image);
-        // changeInnerTextHandler('sec1img', 'post.image')
         const newDiv1 = document.createElement('div')
         const sec1LeftCont = document.getElementById('sec1leftcont')
-
 
         newDiv1.innerHTML = `
         <div class="mt-6 flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
             <!-- Section 1 container left card Left  -->
-            <div class="relative rounded-2xl w-16 h-16">
+            <div id="small-circle-cont" class="relative rounded-2xl w-16 h-16">
                 <img id="sec1img" class="rounded-2xl  object-fill" src="${post.image}" alt="">
-                <p class="top-0 right-0 absolute size-4 rounded-full green-dot"></p>
+                <p id="small-circle" class="top-0 ${post.isActive ? 'green-dot' : 'red-dot'} right-0 absolute size-4 rounded-full"></p>
             </div>
             <!-- Section 1 container left card Right  -->
             <div class="w-full">
@@ -37,7 +36,7 @@ const allPosts = async () => {
                     </div>
                     <div class="bg-green-600 h-8 w-9 rounded-full flex
                         justify-center">
-                        <button class=btn"><i class=" text-white fa-solid
+                        <button onclick="readBtn('${post.id}')" class=btn"><i class=" text-white fa-solid
                         fa-envelope-open"></i></button>
                     </div>
                 </div>
@@ -46,27 +45,55 @@ const allPosts = async () => {
         `
         sec1LeftCont.appendChild(newDiv1)
 
+        
 
 
-        // console.log();
+
+        // read button related ----------------------
+         readBtn = (id) => {
+            // Increasing read count 
+            readCount ++
+            document.getElementById('readCount').innerText = readCount
+       
+
+            // adding read articles 
+            const newDiv2 = document.createElement('div')
+            const readPostContainer = document.getElementById('readPostContainer')
+
+            data.posts.forEach((post)=>{
+                if(post.id == id){
+
+                    newDiv2.innerHTML=`
+                <div class="my-2 p-4 bg-white rounded-2xl flex justify-between gap-2">
+                    <p class="text-base font-semibold">${post.title}</p>
+                    <div class="flex gap-2 items-center">
+                        <p><i class="text-[#12132d83] fa-regular fa-eye"></i></p>
+                        <p class="text-[#12132d83]">${[post.view_count]}</p>
+                    </div>
+                </div>
+            `
+                }
+                
+            })
+
+            readPostContainer.appendChild(newDiv2)
+        }
+
+
+        // changing circle color --------------------
+
+          
+        
+        
     }
     )
 }
 
 
-// document.getElementById('read-btn').addEventListener('click', (event) =>{
-//     console.log('ok');
 
-// } 
-// )
+// changing circle color 
 
 
 
 
-// const changeInnerTextHandler = (id, value) =>{
-//     const element = document.getElementById(id)
-//     // const innerText = 
-//     element.innerText = value 
-// }
-
-allPosts()
+loadPosts()

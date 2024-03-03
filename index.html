@@ -147,7 +147,7 @@
             <div class="flex gap-6">
                 <!-- Section 1 container left  -->
                 <div id="sec1leftcont" class="w-[70%]">
-                    <div class=" mt-6 flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
+                    <div class="hidden mt-6 flex gap-6 p-10 bg-[#7d7dfc16] border-2 border-[#7d7dfc5a] rounded-3xl">
                         <!-- Section 1 container left card Left  -->
                         <div class="relative rounded-2xl w-16 h-16">
                             <img id="sec1img" class="rounded-2xl  object-fill" src="${post.image}" alt="">
@@ -180,9 +180,9 @@
                                     </p>
                                 </div>
 
-                                <div class="bg-green-600 h-8 w-9 rounded-full flex justify-center">
-                                    <button class=btn"><i class=" text-white fa-solid fa-envelope-open"></i></button>
-                                </div>
+                                <!-- <div class="bg-green-600 h-8 w-9 rounded-full flex justify-center">
+                                    <button onclick="readBtn" class=btn"><i class=" text-white fa-solid fa-envelope-open"></i></button>
+                                </div> -->
 
                                 <!-- <a href="" id="read-btn">
                                     <p class="bg-green-600 rounded-full"><i
@@ -194,18 +194,18 @@
                     </div>
                 </div>
                 <!-- Section 1 container right  -->
-                <div class="bg-[#7d7dfc07] p-6 rounded-3xl">
+                <div id="readPostContainer" class="bg-[#7d7dfc07] p-6 rounded-3xl">
                     <div class="flex justify-between">
                         <p class="text-xl font-bold">Title</p>
-                        <p><i class="fa-solid fa-check-double"></i> Mark as read (<span></span>)</p>
+                        <p><i class="fa-solid fa-check-double"></i> Mark as read (<span id="readCount"></span>)</p>
                     </div>
-                    <div class="my-2 p-4 bg-white rounded-2xl flex justify-between gap-2">
+                    <!-- <div class="my-2 p-4 bg-white rounded-2xl flex justify-between gap-2">
                         <p class="text-base font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <div class="flex gap-2 items-center">
                             <p><i class="text-[#12132d83] fa-regular fa-eye"></i></p>
                             <p class="text-[#12132d83]">asdfsad</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
