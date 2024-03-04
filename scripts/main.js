@@ -2,14 +2,14 @@ let readCount = 0
 
 const loadPosts = async (catName) => {
     let url=catName?`https://openapi.programming-hero.com/api/retro-forum/posts?category=${catName}`:`https://openapi.programming-hero.com/api/retro-forum/posts`
-    console.log(url);
+    // console.log(url);
 
     document.getElementById('loading-spinner').classList.remove('hidden')
 
     const res = await fetch (url)
     
     const data = await res.json()
-    console.log(data);
+    // console.log(data);
     const sec1LeftCont = document.getElementById('sec1leftcont')
     const newDiv1 = document.createElement('div')
     sec1LeftCont.innerHTML=''
@@ -51,7 +51,7 @@ const loadPosts = async (catName) => {
                     </div>
                     <div class="bg-green-600 h-9 w-9 rounded-full flex
                         justify-center">
-                        <button onclick="readBtn('${post.id}')" class=btn"><i class=" text-white fa-solid
+                        <button onclick="readBtn('${post.title.replace("'", " ")}',${post.view_count})" class=btn"><i class=" text-white fa-solid
                         fa-envelope-open"></i></button>
                     </div>
                 </div>
@@ -62,38 +62,7 @@ const loadPosts = async (catName) => {
 
         
 
-
-
-        // read button related ----------------------
-         readBtn = (id) => {
-            // Increasing read count 
-            readCount ++
-            document.getElementById('readCount').innerText = readCount
-       
-
-            // adding read articles 
-            const newDiv2 = document.createElement('div')
-            const readPostContainer = document.getElementById('readPostContainer')
-
-            data.posts.forEach((post)=>{
-                if(post.id == id){
-
-                    newDiv2.innerHTML=`
-                <div class="my-2 p-4 bg-white rounded-2xl flex justify-between gap-2">
-                    <p class="text-base font-semibold">${post.title}</p>
-                    <div class="flex gap-2 items-center">
-                        <p><i class="text-[#12132d83] fa-regular fa-eye"></i></p>
-                        <p class="text-[#12132d83]">${[post.view_count]}</p>
-                    </div>
-                </div>
-            `
-                }
-                
-            })
-
-            readPostContainer.appendChild(newDiv2)
-        }
-
+ 
     }
     )
     }, 2000)
@@ -103,6 +72,32 @@ const loadPosts = async (catName) => {
     
 }
 
+
+// read button related ----------------------
+const readBtn = (title, viewCount ) => {
+    // Increasing read count 
+    console.log(title, viewCount);
+    readCount ++
+    document.getElementById('readCount').innerText = readCount
+
+
+    // adding read articles 
+    const newDiv2 = document.createElement('div')
+    const readPostContainer = document.getElementById('readPostContainer')
+
+            newDiv2.innerHTML=`
+        <div class="my-2 p-4 bg-white rounded-2xl flex justify-between gap-2">
+            <p class="text-base font-semibold">${title}</p>
+            <div class="flex gap-2 items-center">
+                <p><i class="text-[#12132d83] fa-regular fa-eye"></i></p>
+                <p class="text-[#12132d83]">${[viewCount]}</p>
+            </div>
+        </div>
+    `
+
+
+    readPostContainer.appendChild(newDiv2)
+}
 
 
 
